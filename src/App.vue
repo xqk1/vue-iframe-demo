@@ -1,28 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="nav">
+      <router-link class="router" to="/f1">Go to F1</router-link>
+      <div></div>
+      <router-link class="router" to="/f2">Go to F2</router-link>
+      <div></div>
+      <router-link class="router" to="/index?url=http://www.baidu.com">Go to Index</router-link>
+      <div></div>
+      <router-link class="router" to="/indexaaa?url=http://www.qq.com">Go to indexaaa</router-link>      
+    </div>
+    <iframe-router-view></iframe-router-view>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import iframeRouterView from './components/iframe-router-view';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    iframeRouterView
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
